@@ -9,9 +9,16 @@
                 $userId,
                 $userPw,
             ]);
-            $user = execute("insert into member set userName = ?, userId = ?, userPw = ?",
-            array($userName, $userId, $userPw));
-            alert("회원가입이 완료 되었습니다.", "/");
+            $userIsset = fetch("select * from member where userId = ?",
+            array($userId));
+            if(!$userIsset){
+                $user = execute("insert into member set userName = ?, userId = ?, userPw = ?",
+                array($userName, $userId, $userPw));
+                alert("회원가입이 완료 되었습니다.", "/");
+            }
+            else{
+                alert("아이디 중복", "/");
+            }
         break;
 
         case 'login':
