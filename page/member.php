@@ -1,7 +1,9 @@
 <?php
     include_once("./lib/lib.php");
     // session 정보 확인.
-    print_r($SESSIONEDMEMBERS);
+    if($SESSIONEDMEMBERS){
+        print_r($SESSIONEDMEMBERS);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="ko">

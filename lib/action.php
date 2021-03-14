@@ -37,5 +37,14 @@
             session_destroy();
             alert("세션 로그아웃", "/");
         break;
+
+        case 'captcha':
+            if($_SESSION['capt'] != $_POST['captcha']){
+                alert("자동가입방지문구가 올바르지 않습니다.", "/");
+            }
+            else{
+                alert("성공", "/");
+            }
+        break;
     }
 ?>
