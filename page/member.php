@@ -21,14 +21,15 @@
                     <button type="submit" id="submit" name="submit">로그인</button>
             </div>
         </div>
+    <?php }?>
     </form>
-    <?php } else{?>
+        <form class="form-logout" action="/action/logout" method="post">
+    <?php if($SESSIONEDMEMBERS) { ?>
         <div class="logout_container">
-            <form class="form-logout" action="/action/logout" method="post">
                 <button type="submit" id="submit" name="submit">로그아웃</button>
-            </form>
         </div>
     <?php } ?>
+        </form>
     <form class="form-join" action="/action/join" method="post">
         <div class="join">
             <span>회원가입 섹션입니다</span>
