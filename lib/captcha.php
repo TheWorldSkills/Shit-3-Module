@@ -1,7 +1,5 @@
 <?php
-     include_once("./lib/lib.php");
-
-    /* 자동가입방지 문자*/
+/* 자동가입방지 문자*/
 	session_start();
 	header('Content-Type: image/gif');
 
